@@ -3,16 +3,19 @@
 require 'spec_helper'
 
 RSpec.describe Spree::PaymentMethod::BankTransfer, type: :model do
-  let(:order) { build(:order) }
-  let(:payment_method) { create(:bank_transfer_payment_method) }
+  let(:order) { Spree::Order.new }
+  let(:payment_method) { Spree::PaymentMethod::BankTransfer.create! name: "Bank Transfer", active: true }
   let(:payment) do
-    create(:payment, amount: 0.0, order: order, payment_method: payment_method)
+    Spree::Payment.new(amount: 0.0, order: order, payment_method: payment_method)
+  end
+
+  before do
+    payment_method.save!
   end
 
   describe 'preferences' do
-    let(:payment_method) do
-      create(
-        :bank_transfer_payment_method,
+    before do
+      payment_method.update_attributes!(
         preferred_bank_name: 'Uncle Scrooge Bank & Partners',
         preferred_iban: 'IT00 S000 0000 0000 0000 0123 456',
         preferred_holder: 'Donald Duck'
