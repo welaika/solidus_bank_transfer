@@ -7,16 +7,16 @@
 
 <% if payment_method.present? %>
   <p>
-    <strong><%= Spree.t(:reason_for_payment, scope: :bank_transfer) %>: </strong>
-    <span><%= Spree.t(:reason_for_payment_value, scope: :bank_transfer, order_number: @order.number) %></span>
+    <strong><%= t('spree.bank_transfer.reason_for_payment') %>: </strong>
+    <span><%= t('spree.bank_transfer.reason_for_payment_value', order_number: @order.number) %></span>
     <br>
-    <strong><%= Spree.t(:holder, scope: :bank_transfer) %>: </strong>
+    <strong><%= t('spree.bank_transfer.holder') %>: </strong>
     <span><%= payment_method.preferred_holder %></span>
     <br>
-    <strong><%= Spree.t(:iban, scope: :bank_transfer) %>: </strong>
+    <strong><%= t('spree.bank_transfer.iban') %>: </strong>
     <span><%= payment_method.preferred_iban %></span>
     <br>
-    <strong><%= Spree.t(:bank_name, scope: :bank_transfer) %>: </strong>
+    <strong><%= t('spree.bank_transfer.bank_name') %>: </strong>
     <span><%= payment_method.preferred_bank_name %></span>
   </p>
 <% end %>
