@@ -1,5 +1,9 @@
 en:
   spree:
+    holder: Holder
+    iban: IBAN
+    bank_name: Bank name
+
     bank_transfer:
       pay_with_this_method: Pay with bank transfer
       holder: Holder

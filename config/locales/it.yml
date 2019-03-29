@@ -1,5 +1,9 @@
 it:
   spree:
+    holder: Intestatario
+    iban: IBAN
+    bank_name: Nome banca
+
     bank_transfer:
       pay_with_this_method: Paga con bonifico bancario
       holder: Intestatario
