@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Deface::Override.new(
   virtual_path: 'spree/shared/_order_details',
   name: 'add_bank_details_to_order_show',

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module SolidusBankTransfer
   class Engine < Rails::Engine
     require 'spree/core'
@@ -15,7 +17,7 @@ module SolidusBankTransfer
       end
     end
 
-    initializer "spree.register.payment_methods" do |app|
+    initializer 'spree.register.payment_methods' do |app|
       app.config.spree.payment_methods << Spree::PaymentMethod::BankTransfer
     end
 
