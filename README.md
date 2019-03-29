@@ -1,6 +1,8 @@
 SolidusBankTransfer
 ===================
 
+[![Build Status](https://travis-ci.org/welaika/solidus_bank_transfer.svg?branch=master)](https://travis-ci.org/welaika/solidus_bank_transfer)
+
 Introduction goes here.
 
 Installation
