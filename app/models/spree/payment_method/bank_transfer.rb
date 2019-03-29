@@ -37,6 +37,8 @@ module Spree
       false
     end
 
+    private
+
     def simulated_successful_billing_response
       ActiveMerchant::Billing::Response.new(true, '', {}, {})
     end
