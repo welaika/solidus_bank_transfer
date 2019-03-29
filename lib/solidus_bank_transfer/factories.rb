@@ -12,5 +12,6 @@ FactoryBot.define do
     preferred_iban 'IT00 S000 0000 0000 0000 0123 456'
     preferred_holder 'Donald Duck'
     description 'Bank transfer'
+    active true
   end
 end

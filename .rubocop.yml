@@ -1,23 +1,29 @@
+require: rubocop-rspec
+
 AllCops:
   Exclude:
     - 'spec/dummy/**/*'
     - 'vendor/bundle/**/*'
   TargetRubyVersion: 2.6
 
-Metrics/LineLength:
-  Max: 170
-
-Style/Documentation:
-  Enabled: false
+Bundler/DuplicatedGem:
+  Exclude:
+    - 'Gemfile'
 
 Lint/HandleExceptions:
   Exclude:
     - 'Rakefile'
 
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
+
+Metrics/LineLength:
+  Max: 170
+
 Style/ClassAndModuleChildren:
   Exclude:
     - 'app/models/spree/payment_method/bank_transfer.rb'
 
-Bundler/DuplicatedGem:
-  Exclude:
-    - 'Gemfile'
+Style/Documentation:
+  Enabled: false
