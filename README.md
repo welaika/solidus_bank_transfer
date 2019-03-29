@@ -3,7 +3,9 @@ SolidusBankTransfer
 
 [![Build Status](https://travis-ci.org/welaika/solidus_bank_transfer.svg?branch=master)](https://travis-ci.org/welaika/solidus_bank_transfer)
 
-Introduction goes here.
+This extensions add a Bank Transfer payment method.
+
+You can define bank name, IBAN number and holder name in the backend. This data will be shown to the user in the checkout process.
 
 Installation
 ------------
