@@ -4,7 +4,7 @@ require 'spec_helper'
 
 RSpec.describe Spree::PaymentMethod::BankTransfer, type: :model do
   let(:order) { Spree::Order.new }
-  let(:payment_method) { Spree::PaymentMethod::BankTransfer.create! name: "Bank Transfer", active: true }
+  let(:payment_method) { Spree::PaymentMethod::BankTransfer.create!(name: 'Bank Transfer', active: true) }
   let(:payment) do
     Spree::Payment.new(amount: 0.0, order: order, payment_method: payment_method)
   end
