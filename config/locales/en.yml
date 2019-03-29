@@ -1,5 +1,10 @@
-# Sample localization file for English. Add more files in this directory for other locales.
-# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-
 en:
-  hello: Hello world
+  spree:
+    bank_transfer:
+      pay_with_this_method: Pay with bank transfer
+      holder: Holder
+      iban: IBAN
+      bank_name: Bank name
+      reason_for_payment: Reason for payment
+      reason_for_payment_instructions: enter the order number (it will be sent by email after completing the order).
+      reason_for_payment_value: "Order %{order_number}"
