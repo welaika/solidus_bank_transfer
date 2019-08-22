@@ -21,6 +21,10 @@ Metrics/BlockLength:
 Metrics/LineLength:
   Max: 170
 
+RSpec/MultipleExpectations:
+  Exclude:
+    - 'spec/features/**/*'
+
 Style/ClassAndModuleChildren:
   Exclude:
     - 'app/models/spree/payment_method/bank_transfer.rb'
