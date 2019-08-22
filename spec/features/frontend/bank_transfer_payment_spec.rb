@@ -27,6 +27,6 @@ RSpec.describe 'Checkout - Payment with bank transfer', type: :feature, js: true
 
   it 'shows the bank transfer payment' do
     expect(page).to have_content('Bonifico')
-    expect(page).to have_content('Banca del Monopolio')
+    expect(page).to have_content('Banca del Monopoli')
   end
 end
