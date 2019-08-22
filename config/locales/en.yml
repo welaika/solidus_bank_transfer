@@ -1,4 +1,7 @@
 en:
+  activerecord:
+    models:
+      spree/payment_method/bank_transfer: Bank transfer payments
   spree:
     holder: Holder
     iban: IBAN

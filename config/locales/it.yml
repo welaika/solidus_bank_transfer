@@ -1,4 +1,7 @@
 it:
+  activerecord:
+    models:
+      spree/payment_method/bank_transfer: Pagamento con bonifico
   spree:
     holder: Intestatario
     iban: IBAN
