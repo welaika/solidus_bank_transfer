@@ -1,6 +1,8 @@
 sudo: false
 cache: bundler
 language: ruby
+addons:
+  chrome: stable
 bundler_args: --quiet
 services:
   - mysql
