@@ -31,7 +31,7 @@ Capybara.register_driver :headless_chrome do |app|
 end
 
 Capybara.javascript_driver = ENV.fetch('driver', 'headless_chrome').to_sym
-Capybara.default_max_wait_time = 40
+Capybara.default_max_wait_time = 4
 
 RSpec.configure do |config|
   config.when_first_matching_example_defined(type: :feature) do
