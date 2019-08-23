@@ -1,6 +1,7 @@
 require:
   - rubocop-rspec
   - rubocop-performance
+  - rubocop-rails
 
 AllCops:
   Exclude:
@@ -19,9 +20,13 @@ Lint/HandleExceptions:
 Metrics/BlockLength:
   Exclude:
     - 'spec/**/*'
+    - '*.gemspec'
 
 Metrics/LineLength:
   Max: 170
+
+Rails:
+  Enabled: true
 
 RSpec/MultipleExpectations:
   Exclude:

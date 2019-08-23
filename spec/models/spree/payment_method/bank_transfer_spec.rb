@@ -15,7 +15,7 @@ RSpec.describe Spree::PaymentMethod::BankTransfer, type: :model do
 
   describe 'preferences' do
     before do
-      payment_method.update_attributes!(
+      payment_method.update!(
         preferred_bank_name: 'Uncle Scrooge Bank & Partners',
         preferred_iban: 'IT00 S000 0000 0000 0000 0123 456',
         preferred_holder: 'Donald Duck'
@@ -40,7 +40,7 @@ RSpec.describe Spree::PaymentMethod::BankTransfer, type: :model do
   describe '#can_capture?' do
     context 'when payment state is checkout' do
       before do
-        payment.update_attributes!(state: 'checkout')
+        payment.update!(state: 'checkout')
       end
 
       it 'returns true' do
@@ -50,7 +50,7 @@ RSpec.describe Spree::PaymentMethod::BankTransfer, type: :model do
 
     context 'when payment state is pending' do
       before do
-        payment.update_attributes!(state: 'pending')
+        payment.update!(state: 'pending')
       end
 
       it 'returns true' do
@@ -60,7 +60,7 @@ RSpec.describe Spree::PaymentMethod::BankTransfer, type: :model do
 
     context 'when payment state is not pending or checkout' do
       before do
-        payment.update_attributes!(state: 'void')
+        payment.update!(state: 'void')
       end
 
       it 'returns false' do
@@ -72,7 +72,7 @@ RSpec.describe Spree::PaymentMethod::BankTransfer, type: :model do
   describe '#can_void?' do
     context 'when payment state is not void' do
       before do
-        payment.update_attributes!(state: 'pending')
+        payment.update!(state: 'pending')
       end
 
       it 'returns true' do
@@ -82,7 +82,7 @@ RSpec.describe Spree::PaymentMethod::BankTransfer, type: :model do
 
     context 'when payment state is void' do
       before do
-        payment.update_attributes!(state: 'void')
+        payment.update!(state: 'void')
       end
 
       it 'returns false' do
