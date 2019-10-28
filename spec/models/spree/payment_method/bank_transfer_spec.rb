@@ -133,6 +133,7 @@ RSpec.describe Spree::PaymentMethod::BankTransfer, type: :model do
       payment_method.credit
       expect(ActiveMerchant::Billing::Response).to have_received(:new).with(true, '', {}, {})
     end
+
     it 'returns active merchant billing response' do
       expect(payment_method.credit).to be_a(ActiveMerchant::Billing::Response)
     end
