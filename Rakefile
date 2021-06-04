@@ -18,7 +18,7 @@ rescue LoadError
   # no rspec available
 end
 
-task :first_run do
+task first_run: :environment do
   if Dir['spec/dummy'].empty?
     Rake::Task[:test_app].invoke
     Dir.chdir('../../')
@@ -26,7 +26,7 @@ task :first_run do
 end
 
 desc 'Generates a dummy app for testing'
-task :test_app do
+task test_app: :environment do
   ENV['LIB_NAME'] = 'solidus_bank_transfer'
   Rake::Task['extension:test_app'].invoke
 end
