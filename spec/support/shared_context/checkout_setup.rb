@@ -9,4 +9,6 @@ RSpec.shared_context 'with checkout setup' do
   let!(:mug) { create(:product, name: 'RoR Mug') }
   let!(:payment_method) { create(:bank_transfer_payment_method) }
   let!(:zone) { create(:zone) }
+
+  before { [store, country, state, shipping_method, stock_location, mug, payment_method, zone] }
 end
