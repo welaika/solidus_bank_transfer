@@ -1,0 +1,17 @@
+de:
+  activerecord:
+    models:
+      spree/payment_method/bank_transfer: Zahlung mit Banküberweisung
+  spree:
+    holder: Kontoinhaber
+    iban: IBAN
+    bank_name: Name der Bank
+
+    bank_transfer:
+      pay_with_this_method: Zahlung mit Banküberweisung
+      holder: Kontoinhaber
+      iban: IBAN
+      bank_name: Name der Bank
+      reason_for_payment: Überweisungszweck
+      reason_for_payment_instructions: Bestellnummer angeben (wird per Email zugesendet und auf der nächsten Seite angezeigt).
+      reason_for_payment_value: "Bestellnummer %{order_number}"
