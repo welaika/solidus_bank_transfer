@@ -18,7 +18,7 @@ module SolidusBankTransfer
     end
 
     initializer 'spree.register.payment_methods' do |app|
-      app.config.spree.payment_methods << Spree::PaymentMethod::BankTransfer
+      app.config.spree.payment_methods << "Spree::PaymentMethod::BankTransfer"
     end
 
     config.to_prepare(&method(:activate).to_proc)
